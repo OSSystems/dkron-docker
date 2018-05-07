@@ -4,13 +4,13 @@ RUN apk add git --no-cache
 
 RUN go get -u github.com/golang/dep/cmd/dep
 
-ADD https://api.github.com/repos/gustavosbarreto/dkron-executor-http/git/refs/heads/master /tmp/
-RUN go get -u github.com/gustavosbarreto/dkron-executor-http
+ADD https://api.github.com/repos/OSSystems/dkron-executor-http/git/refs/heads/master /tmp/
+RUN go get -u github.com/OSSystems/dkron-executor-http
 
 WORKDIR /go/src/github.com/victorcoder
 
-ADD https://api.github.com/repos/gustavosbarreto/dkron/git/refs/heads/master /tmp/
-RUN git clone https://github.com/gustavosbarreto/dkron.git
+ADD https://api.github.com/repos/OSSystems/dkron/git/refs/heads/master /tmp/
+RUN git clone https://github.com/OSSystems/dkron.git
 
 WORKDIR /go/src/github.com/victorcoder/dkron
 
